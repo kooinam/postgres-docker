@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry("https://index.docker.io/v1/", '6da4bfc5-12fb-4165-982c-2c2423372ef6') {
+    docker.withRegistry("https://mrn-staging-ci.hickorylab.com:49003/", '6da4bfc5-12fb-4165-982c-2c2423372ef6') {
 
         git url: "git@bitbucket.org:hickory_lab/mrn_postgres.git", credentialsId: 'b9bcb64d-45fa-47dc-96bf-97f4685f52fa'
 
