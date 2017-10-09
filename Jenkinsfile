@@ -1,7 +1,7 @@
 node {
-    docker.withRegistry("${params.DOCKER_REGISTRY_URL}", '${params.DOCKER_REGISTRY_CREDENTIALS}') {
+    docker.withRegistry("${params.DOCKER_REGISTRY_URL}", "${params.DOCKER_REGISTRY_CREDENTIALS}"") {
 
-        git url: "${params.GIT_URL}", credentialsId: '${params.GIT_CREDENTIALS}'
+        git url: "${params.GIT_URL}", credentialsId: "${params.GIT_CREDENTIALS}""
 
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
